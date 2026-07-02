@@ -60,7 +60,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/YOUR_USERNAME/novaflow.git
+git clone https://github.com/buildbyabhi/novaflow.git
 cd novaflow
 npm install
 ```
