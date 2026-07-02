@@ -1,0 +1,221 @@
+.config-panel-container {
+  width: 340px;
+  height: 100%;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 16px;
+  overflow-y: auto;
+  border-radius: 0;
+  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.config-panel-container.empty-state {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  gap: 12px;
+}
+
+.config-empty-icon {
+  color: var(--color-text-muted);
+  opacity: 0.25;
+}
+
+.config-empty-title {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-main);
+  letter-spacing: 0.5px;
+}
+
+.config-empty-desc {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 230px;
+}
+
+/* Header */
+.config-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.config-panel-title {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.config-node-type {
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+}
+
+/* Body and inputs */
+.config-panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.config-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.config-label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.config-input, .config-select, .config-textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  font-size: 12.5px;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.config-textarea {
+  resize: vertical;
+}
+
+.readonly-textarea {
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  user-select: text;
+}
+
+/* Slider */
+.config-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-value {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-cyan);
+  font-weight: 600;
+}
+
+.config-slider {
+  width: 100%;
+  cursor: pointer;
+  accent-color: var(--color-cyan);
+}
+
+/* Tip */
+.config-tip {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  background: rgba(0, 255, 204, 0.03);
+  border: 1px dashed rgba(0, 255, 204, 0.15);
+  border-radius: 6px;
+  font-size: 10.5px;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+.config-tip code {
+  color: var(--color-cyan);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.tip-icon {
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+/* Copy button */
+.config-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.config-icon-label {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Footer & Delete */
+.config-panel-footer {
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+}
+
+.delete-node-btn {
+  width: 100%;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.06);
+  color: #fca5a5;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  padding: 9px;
+  border-radius: 6px;
+}
+
+.delete-node-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.55);
+  transform: scale(1.01);
+}
